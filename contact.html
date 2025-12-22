@@ -514,9 +514,9 @@
 
     <!-- jQuery Frameworks
     ============================================= -->
-    <script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // stop page reload
+   <script>
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
 
     const form = this;
     const messageBox = document.getElementById("message");
@@ -525,17 +525,23 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         method: "POST",
         body: new FormData(form),
         headers: {
-            'Accept': 'application/json'
+            "Accept": "application/json"
         }
-    }).then(response => {
-        if (response.ok) {
-            messageBox.innerHTML = "<span style='color:green;'>✅ Your message has been sent successfully!</span>";
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success === "true" || data.ok) {
+            messageBox.innerHTML =
+              "<span style='color:green;'>✅ Thank you! Your message has been sent successfully.</span>";
             form.reset();
         } else {
-            messageBox.innerHTML = "<span style='color:red;'>❌ Something went wrong. Please try again.</span>";
+            messageBox.innerHTML =
+              "<span style='color:red;'>❌ Submission failed. Please try again.</span>";
         }
-    }).catch(error => {
-        messageBox.innerHTML = "<span style='color:red;'>❌ Network error. Please try again.</span>";
+    })
+    .catch(() => {
+        messageBox.innerHTML =
+          "<span style='color:red;'>❌ Network error. Please try again.</span>";
     });
 });
 </script>
