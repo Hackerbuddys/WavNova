@@ -256,7 +256,7 @@
                             <p>Reach out to the world’s most reliable IT services.</p>
                         </div>
                         <form action="https://formsubmit.co/wavnovatech@gmail.com" method="POST" class="contact-form" id="contactForm">
-    <input type="hidden" name="_subject" value="New Contact Form - WavNova">
+     <input type="hidden" name="_subject" value="New Contact Form - WavNova">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">
     <input type="text" name="_honey" style="display:none">
@@ -516,7 +516,7 @@
     ============================================= -->
    <script>
 document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // 🚨 stops redirect to FormSubmit page
+    e.preventDefault(); // stop FormSubmit redirect
 
     const form = this;
     const messageBox = document.getElementById("message");
@@ -528,7 +528,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
             "Accept": "application/json"
         }
     })
-    .then(res => res.json())
+    .then(response => response.json())
     .then(data => {
         if (data.ok) {
             messageBox.innerHTML =
@@ -536,7 +536,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
             form.reset();
         } else {
             messageBox.innerHTML =
-              "<span style='color:red;'>❌ Something went wrong. Please try again.</span>";
+              "<span style='color:red;'>❌ Submission failed. Please try again.</span>";
         }
     })
     .catch(() => {
@@ -545,6 +545,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     });
 });
 </script>
+
 
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
