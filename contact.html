@@ -255,63 +255,73 @@
                             <h2 class="title">Need Help?</h2>
                             <p>Reach out to the world’s most reliable IT services.</p>
                         </div>
-                        <form action="assets/mail/contact.php" method="POST" class="contact-form">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input class="form-control" id="name" name="name" placeholder="Name" type="text">
-                                        <span class="alert-error"></span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input class="form-control" id="email" name="email" placeholder="Email*" type="email" required>
-                                        <span class="alert-error"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <input class="form-control" id="phone" name="phone" placeholder="Phone*" type="text" required>
-                                        <span class="alert-error"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">     
-                                    <div class="form-group">
-                                            <select name="service" id="service" class="form-control" required>
-                                                    <option value="">What services can we provide you?</option>
-                                                    <option value="Website Design & Development">Website Design & Development</option>
-                                                    <option value="Social Media Management">Social Media Management</option>
-                                                    <option value="Content Creation & Blogging">Content Creation & Blogging</option>
-                                                    <option value="Digital Marketing & SEO">Digital Marketing & SEO</option>
-                                                    <option value="Website Hosting & Maintenance">Website Hosting & Maintenance</option>
-                                                    <option value="Other">Other</option>     
-                                            </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group comments">
-                                        <textarea class="form-control" id="comments" name="comments" placeholder="Please describe what you need."></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <button type="submit" name="submit" id="submit">
-                                        Get a free consultation
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- Alert Message -->
-                            <div class="col-md-12 alert-notification">
-                                <div id="message" class="alert-msg"></div>
-                            </div>
-                        </form>
+                        <form action="https://formsubmit.co/wavnovatech@gmail.com" method="POST" class="contact-form" id="contactForm">
+    <input type="hidden" name="_subject" value="New Contact Form - WavNova">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" style="display:none">
+
+    <div class="row">
+        <div class="col-lg-5">
+            <div class="form-group">
+                <input class="form-control" id="name" name="name" placeholder="Name" type="text">
+                <span class="alert-error"></span>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <div class="form-group">
+                <input class="form-control" id="email" name="email" placeholder="Email*" type="email" required>
+                <span class="alert-error"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <input class="form-control" id="phone" name="phone" placeholder="Phone*" type="text" required>
+                <span class="alert-error"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <select name="service" id="service" class="form-control" required>
+                    <option value="">What services can we provide you?</option>
+                    <option value="Website Design & Development">Website Design & Development</option>
+                    <option value="Social Media Management">Social Media Management</option>
+                    <option value="Content Creation & Blogging">Content Creation & Blogging</option>
+                    <option value="Digital Marketing & SEO">Digital Marketing & SEO</option>
+                    <option value="Website Hosting & Maintenance">Website Hosting & Maintenance</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group comments">
+                <textarea class="form-control" id="comments" name="comments" placeholder="Please describe what you need."></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <button type="submit" name="submit" id="submit">
+                Get a free consultation
+            </button>
+        </div>
+    </div>
+
+    <div class="col-md-12 alert-notification">
+        <div id="message" class="alert-msg"></div>
+    </div>
+
+</form>
                     </div>
                 </div>
 
@@ -504,6 +514,32 @@
 
     <!-- jQuery Frameworks
     ============================================= -->
+    <script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop page reload
+
+    const form = this;
+    const messageBox = document.getElementById("message");
+
+    fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            messageBox.innerHTML = "<span style='color:green;'>✅ Your message has been sent successfully!</span>";
+            form.reset();
+        } else {
+            messageBox.innerHTML = "<span style='color:red;'>❌ Something went wrong. Please try again.</span>";
+        }
+    }).catch(error => {
+        messageBox.innerHTML = "<span style='color:red;'>❌ Network error. Please try again.</span>";
+    });
+});
+</script>
+
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.appear.js"></script>
