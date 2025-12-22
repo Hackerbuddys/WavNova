@@ -516,7 +516,7 @@
     ============================================= -->
    <script>
 document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+    e.preventDefault(); // 🚨 stops redirect to FormSubmit page
 
     const form = this;
     const messageBox = document.getElementById("message");
@@ -528,15 +528,15 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
             "Accept": "application/json"
         }
     })
-    .then(response => response.json())
+    .then(res => res.json())
     .then(data => {
-        if (data.success === "true" || data.ok) {
+        if (data.ok) {
             messageBox.innerHTML =
               "<span style='color:green;'>✅ Thank you! Your message has been sent successfully.</span>";
             form.reset();
         } else {
             messageBox.innerHTML =
-              "<span style='color:red;'>❌ Submission failed. Please try again.</span>";
+              "<span style='color:red;'>❌ Something went wrong. Please try again.</span>";
         }
     })
     .catch(() => {
