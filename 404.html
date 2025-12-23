@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="WavNova - Tech Solutions">
+    <meta name="description" content="WavNova Tech Solutions provides website development, digital marketing, SEO, and scalable IT solutions to help businesses grow.">
 
     <!-- ========== Page Title ========== -->
-    <title>WavNova - Tech Solutions</title>
+    <title>WavNova Tech Solutions | IT Services & Digital Solutions Company</title>
 
     <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
@@ -106,25 +106,35 @@
                     <div class="info">
                         <ul>
                             <li>
-                                <i class="fas fa-clock"></i> Office Hours: 8:00 AM – 7:45 PM
+                                <i class="fas fa-clock"></i> Office Hours: 10:00 AM – 6:00 PM
                             </li>
                         </ul>
                     </div>
                     <div class="social">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="https://www.instagram.com/wavnova/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/profile.php?id=61582931103230&rdid=J2LjQcI1FcSFzKt4" target="_blank" rel="noopener noreferrer">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
+                                <a href="https://www.linkedin.com/in/wavnova-tech-6762a8393/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-linkedin-in"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
-                                    <i class="fab fa-linkedin-in"></i>
+                                <a href="https://www.youtube.com/@WavNovaTech" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://x.com/WavNovaTech" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-twitter"></i>
                                 </a>
                             </li>
                         </ul>
@@ -150,7 +160,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/logo.png" class="logo" alt="Logo">
+                        <img src="assets/img/logo.png" class="logo" alt="WavNova Logo">
                     </a>
                 </div>
                 <!-- End Header Navigation -->
@@ -159,7 +169,7 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
 
                     <div class="collapse-header">
-                        <img src="assets/img/logo.png" alt="Logo">
+                        <img src="assets/img/logo.png" alt="WavNova Logo">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                             <i class="fa fa-times"></i>
                         </button>
@@ -337,13 +347,37 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 item">
                         <div class="f-item about">
-                            <img src="assets/img/logo-light.png" alt="Logo">
+                            <img src="assets/img/logo-light.png" alt="WavNova Tech Solutions Logo">
+                    
                             <p>
-                                Happen active county. Winding for the morning am shyness evident to poor. Garrets because elderly new.
+                                Subscribe to receive updates, insights, and the latest news
+                                about our IT services and digital solutions.
                             </p>
-                            <form action="#">
-                                <input type="email" placeholder="Your Email" class="form-control" name="email">
-                                <button type="submit"> <i class="fa fa-paper-plane"></i></button>  
+                    
+                            <form action="https://formsubmit.co/wavnovatech@gmail.com"
+                                  method="POST"
+                                  id="footerSubscribeForm"
+                                  onsubmit="return false;">
+                    
+                                <!-- FormSubmit hidden fields -->
+                                <input type="hidden" name="_subject" value="New Newsletter Subscription – WavNova">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="source" value="Website Footer">
+                                <input type="text" name="_honey" style="display:none">
+                    
+                                <input type="email"
+                                       placeholder="Your Email"
+                                       class="form-control"
+                                       name="email"
+                                       required>
+                    
+                                <button type="submit">
+                                    <i class="fa fa-paper-plane"></i>
+                                </button>
+                    
+                                <!-- Success message -->
+                                <div id="footerMessage" class="alert-msg" style="margin-top:8px;"></div>
+                    
                             </form>
                         </div>
                     </div>
@@ -468,6 +502,7 @@
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/validnavs.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/my-custom.js"></script>
 
 </body>
 </html>
