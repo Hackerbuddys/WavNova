@@ -26,12 +26,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'wavnovatech@gmail.com';
+        $mail->Username   = 'admin@wavnova.in';
         $mail->Password   = 'xqeq lgce qpon qcmn';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        $mail->setFrom('wavnovatech@gmail.com', 'WavNova Tech Solution');
+        $mail->setFrom('admin@wavnova.in', 'WavNova Tech Solution');
         $mail->addAddress('YOUR_PERSONAL_EMAIL');
 
         $mail->isHTML(true);
@@ -54,12 +54,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $reply->isSMTP();
         $reply->Host       = 'smtp.gmail.com';
         $reply->SMTPAuth   = true;
-        $reply->Username   = 'wavnovatech@gmail.com';
+        $reply->Username   = 'admin@wavnova.in';
         $reply->Password   = 'xqeq lgce qpon qcmn';
         $reply->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $reply->Port       = 587;
 
-        $reply->setFrom('wavnovatech@gmail.com', 'WavNova Tech Solution');
+        $reply->setFrom('admin@wavnova.in', 'WavNova Tech Solution');
         $reply->addAddress($email);
 
         $reply->isHTML(true);
