@@ -8678,7 +8678,7 @@ color: #5138ee;
     content: "";
     height: 50px;
     width: 50px;
-    background: url(assets/img/logo-icon.png);
+    background: url(assets/img/wavnova-icon.png);
     transform: translateX(-50%);
     background-repeat: no-repeat;
     background-position: center;
@@ -8701,8 +8701,11 @@ color: #5138ee;
 }
 
 .WavNova-preloader .animation-preloader .txt-loading {
-	font: bold 4em 'Outfit', sans-serif;
+	font-family: 'Outfit', sans-serif;
+  font-weight: 700; 
+  font-size: clamp(1.8rem, 6vw, 4rem);
 	text-align: center;
+  white-space: nowrap;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -8898,4 +8901,10 @@ color: #5138ee;
 		-webkit-transform: rotateY(0deg);
 		transform: rotateY(0deg);
 	}
+}
+
+@media (max-width: 480px) {
+    .WavNova-preloader .animation-preloader {
+        transform: scale(0.9);
+    }
 }
