@@ -1670,9 +1670,28 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
 body, 
 .banner-area, 
 .banner-area div {
-  height: 100%;
+  height: auto;
 }
 
+@media (max-width: 991px) {
+  .banner-area {
+    height: auto;
+    padding-bottom: 85px;
+  }
+
+  .appoinment {
+    margin-top: 40px;
+  }
+}
+
+
+.banner-area {
+  min-height: 100vh; /* Full screen banner */
+  padding-top: 15px;
+}
+.banner-area {
+  min-height: 100vh; /* Full screen banner */
+}
 .banner-area.auto-height, 
 .banner-area.auto-height div {
   height: auto;
