@@ -1670,7 +1670,14 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
 body, 
 .banner-area, 
 .banner-area div {
-  height: auto;
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+     .appoinment-box {
+        position: relative;
+        top: -73px;
+    }
 }
 
 @media (max-width: 991px) {
