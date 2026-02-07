@@ -1691,6 +1691,11 @@ body,
   }
 }
 
+/* contact form responsive */
+.contact-form-box {
+  position: relative;
+  top: -35px;
+}
 
 .banner-area {
   min-height: 100vh; /* Full screen banner */
