@@ -1696,6 +1696,13 @@ body,
   position: relative;
   top: -35px;
 }
+@media (max-width: 991px) {
+  .contact-form-box {
+    position: relative;
+    top: 0;
+  }
+}
+/* contact form close*/
 
 .banner-area {
   min-height: 100vh; /* Full screen banner */
