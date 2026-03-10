@@ -9,7 +9,79 @@
     <meta name="description" content="WavNova Tech Solutions provides website development, digital marketing, SEO, and scalable IT solutions to help businesses grow.">
 
     <!-- ========== Page Title ========== -->
-    <title>WavNova Tech Solutions | IT Services & Digital Solutions Company</title>
+<title>Digital Marketing & SEO Services | WavNova Tech Solutions</title>
+
+<meta name="description" content="Boost your online visibility with digital marketing and SEO services from WavNova Tech Solutions. Improve rankings, increase traffic, and grow your business with data-driven marketing strategies.">
+
+<meta name="keywords" content="SEO services, digital marketing company, search engine optimization services, online marketing agency, SEO experts">
+
+<link rel="canonical" href="https://wavnova.in/digital-marketing-seo">
+
+<meta property="og:title" content="Digital Marketing & SEO Services | WavNova Tech Solutions">
+<meta property="og:description" content="Improve your search rankings and drive targeted traffic with professional SEO and digital marketing services.">
+<meta property="og:url" content="https://wavnova.in/digital-marketing-seo">
+<meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Digital Marketing & SEO Services">
+<meta name="twitter:description" content="SEO and digital marketing strategies designed to help your business grow online.">
+
+     <!-- ========== Service Schema ========== -->
+    <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Service",
+ "serviceType": "IT and Digital Marketing Services",
+ "provider": {
+   "@type": "Organization",
+   "name": "WavNova Tech Solutions",
+   "url": "https://wavnova.in"
+ },
+ "areaServed": "Worldwide",
+ "description": "WavNova Tech Solutions provides website design and development, SEO optimization, digital marketing strategies, social media management, content creation, and IT support services that help businesses build strong online visibility and sustainable growth.",
+ "hasOfferCatalog": {
+   "@type": "OfferCatalog",
+   "name": "Digital Services",
+   "itemListElement": [
+     {
+       "@type": "Offer",
+       "itemOffered": {
+         "@type": "Service",
+         "name": "Website Design and Development"
+       }
+     },
+     {
+       "@type": "Offer",
+       "itemOffered": {
+         "@type": "Service",
+         "name": "SEO and Digital Marketing"
+       }
+     },
+     {
+       "@type": "Offer",
+       "itemOffered": {
+         "@type": "Service",
+         "name": "Social Media Management"
+       }
+     },
+     {
+       "@type": "Offer",
+       "itemOffered": {
+         "@type": "Service",
+         "name": "Content Creation and Blogging"
+       }
+     },
+     {
+       "@type": "Offer",
+       "itemOffered": {
+         "@type": "Service",
+         "name": "IT Support and Maintenance"
+       }
+     }
+   ]
+ }
+}
+</script>
 
     <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
@@ -1204,6 +1276,29 @@
 
     <!-- jQuery Frameworks
     ============================================= -->
+   <script>
+(function () {
+    const form = document.getElementById("appointmentForm");
+    const messageBox = document.getElementById("appointmentMessage");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+
+        fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            mode: "no-cors"
+        });
+
+        messageBox.innerHTML =
+          "<span style='color:green;'> Thank you! We’ll contact you shortly.</span>";
+
+        form.reset();
+    });
+})();
+</script>
+    
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.appear.js"></script>
@@ -1219,6 +1314,7 @@
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/validnavs.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/my-custom.js"></script>
     <script src="assets/js/my-custom.js"></script>
 
 </body>

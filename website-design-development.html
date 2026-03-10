@@ -9,8 +9,22 @@
     <meta name="description" content="WavNova Tech Solutions provides website development, digital marketing, SEO, and scalable IT solutions to help businesses grow.">
 
     <!-- ========== Page Title ========== -->
-    <title>WavNova Tech Solutions | IT Services & Digital Solutions Company</title>
+<title>Website Design & Development Services | WavNova Tech Solutions</title>
 
+<meta name="description" content="Professional website design and development services by WavNova Tech Solutions. We create responsive, SEO-friendly, and high-performance websites that help businesses grow online.">
+
+<meta name="keywords" content="website design services, website development company, responsive website development, custom website design, web development services, business website development">
+
+<link rel="canonical" href="https://wavnova.in/website-design-development">
+
+<meta property="og:title" content="Website Design & Development Services | WavNova Tech Solutions">
+<meta property="og:description" content="Build modern, responsive, and SEO-optimized websites with WavNova Tech Solutions.">
+<meta property="og:url" content="https://wavnova.in/website-design-development">
+<meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Website Design & Development Services">
+<meta name="twitter:description" content="Professional website development solutions to grow your business online.">
 
     <!-- ========== Service Schema ========== -->
     <script type="application/ld+json">
@@ -1011,6 +1025,29 @@
 
     <!-- jQuery Frameworks
     ============================================= -->
+   <script>
+(function () {
+    const form = document.getElementById("appointmentForm");
+    const messageBox = document.getElementById("appointmentMessage");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+
+        fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            mode: "no-cors"
+        });
+
+        messageBox.innerHTML =
+          "<span style='color:green;'> Thank you! We’ll contact you shortly.</span>";
+
+        form.reset();
+    });
+})();
+</script>
+    
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.appear.js"></script>
@@ -1026,6 +1063,7 @@
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/validnavs.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/my-custom.js"></script>
     <script src="assets/js/my-custom.js"></script>
 
 </body>
